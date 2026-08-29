@@ -1,0 +1,15 @@
+{
+    "name": null,
+    "input_variables": [
+        "user_input"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "You are an expert blog writer. Write an engaging, high-quality blog post on the topic: \"{user_input}\".\n\nPlease follow this structure:\n1. **Catchy Title**: An attention-grabbing headline.\n2. **Introduction**: Hook the reader and introduce the core idea.\n3. **Key Insights / Subsections**: 3-4 structured sections with descriptive subheadings.\n4. **Takeaway & Conclusion**: A concise summary and call-to-action/final thought.\n\nFormat the output clearly using Markdown.\n    ",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

@@ -16,10 +16,11 @@ documents=['Virat Kohli is an Indian cricketer known for his aggressive batting 
 
 embed=embedding.embed_documents(documents)
 
-query="tell me about virat kohli"
+query="tell me about Indian Captain"
 
 query_embedding=embedding.embed_query(query)
 
 similarity=cosine_similarity([query_embedding],embed)[0]
 
-print(sorted(list(enumerate(similarity)),key=lambda x:x[1],reverse=True))
+index,score=sorted(list(enumerate(similarity)),key=lambda x:x[1],reverse=True)[0]
+print(documents[index],score)
