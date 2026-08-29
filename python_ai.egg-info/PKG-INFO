@@ -1,0 +1,23 @@
+Metadata-Version: 2.4
+Name: python-ai
+Version: 0.1.0
+Summary: AI and LLM exploration project
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: langchain
+Requires-Dist: langchain-core
+Requires-Dist: langchain-openai
+Requires-Dist: openai
+Requires-Dist: langchain-anthropic
+Requires-Dist: langchain-google-genai
+Requires-Dist: google-generativeai
+Requires-Dist: langchain-huggingface
+Requires-Dist: transformers
+Requires-Dist: huggingface-hub
+Requires-Dist: python-dotenv
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+
+# Python AI
+
+AI and LLM exploration project.
