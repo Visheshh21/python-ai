@@ -24,4 +24,6 @@ chain=template | model | parser
 
 result=chain.invoke({'place':'Turkey'})
 
+chain.get_graph().print_ascii()
+
 print(result)
