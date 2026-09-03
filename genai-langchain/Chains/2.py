@@ -29,7 +29,7 @@ prompt3=PromptTemplate(
 
 parallel_chain=RunnableParallel({
     'notes': prompt1 | model1 | parser,
-    'quiz': prompt2 | model2 | parser
+    'quiz': prompt2 | model2 | parser 
 })
 
 merge_chain=prompt3|model3|parser

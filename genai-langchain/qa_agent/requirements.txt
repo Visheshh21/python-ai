@@ -1,0 +1,8 @@
+langgraph
+langchain-groq
+langchain-core
+python-dotenv
+pydantic
+google-cloud-bigquery
+db-dtypes
+pandas

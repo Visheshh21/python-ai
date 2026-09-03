@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Auditor Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- External Libraries -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://lh3.googleusercontent.com/aida/AEtjO1UOWuZ46kxz-olq0cCjFZJ-w32flJsowAHiqcjqvaE5HfXfMdTBD9Z5Jz7zn9k7JbjH--G78J9fjn6YZzRPuL8gz8S_UZE4NPDWZmf-aEKTqScNsVMFRVkmLQ-n9-4L06GaokBCEn0k_KYU1U1Y5Op02A3ECWJyYfUV2_GhuMto17l2_OZ5drWLctluPNdfeQp0lQiNj2CCyEd1kpLzRYyelUbEZwSnTeIgijDPwAOq8YpekGoOtBVQHlx7JBG6kHpGOunNAi2g" alt="11Sight Logo">
+                <h2>AI Auditor QA</h2>
+            </div>
+            
+            <div class="audit-controls">
+                <p class="subtitle">Run Agent Pipeline</p>
+                <div class="input-group">
+                    <label for="callLimit">Number of Calls</label>
+                    <input type="number" id="callLimit" value="5" min="1" max="50">
+                </div>
+                <button id="runBtn" class="primary-btn">
+                    <i data-lucide="play"></i>
+                    <span>Run Audit</span>
+                </button>
+            </div>
+            
+            <div id="loader" class="loader hidden">
+                <div class="spinner"></div>
+                <p>Analyzing transcripts...</p>
+                <div style="background: rgba(5, 223, 114, 0.1); padding: 8px 16px; border-radius: 8px; border: 1px solid rgba(5, 223, 114, 0.3); margin-top: 8px; width: 100%;">
+                    <p id="progressText" style="font-weight: 700; color: var(--accent-primary); font-size: 1.1rem; margin: 0;"></p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header>
+                <h1>Performance Dashboard</h1>
+                <p>Auditing Virtual Agent Behavior</p>
+            </header>
+
+            <div class="dashboard-grid">
+                <!-- Metrics -->
+                <div class="card metric-card">
+                    <div class="metric-icon primary"><i data-lucide="phone"></i></div>
+                    <div class="metric-info">
+                        <h3>Total Audited</h3>
+                        <p id="metricTotal">--</p>
+                    </div>
+                </div>
+                
+                <div class="card metric-card">
+                    <div class="metric-icon red"><i data-lucide="activity"></i></div>
+                    <div class="metric-info">
+                        <h3>Defect Rate</h3>
+                        <p id="metricDefectRate">--</p>
+                    </div>
+                </div>
+                
+                <div class="card metric-card">
+                    <div class="metric-icon purple"><i data-lucide="frown"></i></div>
+                    <div class="metric-info">
+                        <h3>Escalations</h3>
+                        <p id="metricEscalations">--</p>
+                    </div>
+                </div>
+
+                <!-- Markdown Report -->
+                <div class="card report-card">
+                    <div class="card-header">
+                        <h2><i data-lucide="file-text"></i> Executive Summary</h2>
+                    </div>
+                    <div id="markdownContent" class="markdown-body">
+                        <div class="empty-state">
+                            <i data-lucide="inbox"></i>
+                            <p>Run an audit to generate the AI performance report.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Table -->
+                <div class="card table-card">
+                    <div class="card-header">
+                        <h2><i data-lucide="table"></i> Call Transcripts Breakdown</h2>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="callsTable">
+                            <thead>
+                                <tr>
+                                    <th>Call ID</th>
+                                    <th>AI Defect Category</th>
+                                    <th>Sentiment</th>
+                                    <th>Summary</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
