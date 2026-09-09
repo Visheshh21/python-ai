@@ -9,29 +9,18 @@
     <!-- External Libraries -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <div class="app-container">
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="logo">
-                <img src="https://lh3.googleusercontent.com/aida/AEtjO1UOWuZ46kxz-olq0cCjFZJ-w32flJsowAHiqcjqvaE5HfXfMdTBD9Z5Jz7zn9k7JbjH--G78J9fjn6YZzRPuL8gz8S_UZE4NPDWZmf-aEKTqScNsVMFRVkmLQ-n9-4L06GaokBCEn0k_KYU1U1Y5Op02A3ECWJyYfUV2_GhuMto17l2_OZ5drWLctluPNdfeQp0lQiNj2CCyEd1kpLzRYyelUbEZwSnTeIgijDPwAOq8YpekGoOtBVQHlx7JBG6kHpGOunNAi2g" alt="11Sight Logo">
+                <img src="/11sight.png" alt="11Sight Logo">
                 <h2>AI Auditor QA</h2>
             </div>
             
-            <div class="audit-controls">
-                <p class="subtitle">Run Agent Pipeline</p>
-                <div class="input-group">
-                    <label for="callLimit">Number of Calls</label>
-                    <input type="number" id="callLimit" value="5" min="1" max="50">
-                </div>
-                <button id="runBtn" class="primary-btn">
-                    <i data-lucide="play"></i>
-                    <span>Run Audit</span>
-                </button>
-            </div>
-            
-            <div id="loader" class="loader hidden">
+            <div id="loader" class="loader hidden" style="margin-top: auto;">
                 <div class="spinner"></div>
                 <p>Analyzing transcripts...</p>
                 <div style="background: rgba(5, 223, 114, 0.1); padding: 8px 16px; border-radius: 8px; border: 1px solid rgba(5, 223, 114, 0.3); margin-top: 8px; width: 100%;">
@@ -46,6 +35,45 @@
                 <h1>Performance Dashboard</h1>
                 <p>Auditing Virtual Agent Behavior</p>
             </header>
+
+            <div class="audit-controls top-controls">
+                <div class="input-group">
+                    <label>Dealerships</label>
+                    <div class="custom-multiselect">
+                        <div class="select-box" onclick="document.getElementById('dealershipCheckboxes').classList.toggle('show')">
+                            Select Dealerships <i data-lucide="chevron-down" style="width: 16px; height: 16px; float: right;"></i>
+                        </div>
+                        <div class="checkboxes" id="dealershipCheckboxes">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" id="startDate" style="width: 100%;">
+                </div>
+                
+                <div class="input-group">
+                    <label for="endDate">End Date</label>
+                    <input type="date" id="endDate" style="width: 100%;">
+                </div>
+                
+                <div class="input-group" style="flex: 2; min-width: 300px;">
+                    <label for="customCategories">Custom Categories (Comma Separated)</label>
+                    <textarea id="customCategories" rows="2" style="width: 100%; border-radius: 4px; border: 1px solid #ccc; resize: vertical;" placeholder="Erroneous Cancellations, Ignored Requests, Normal / No Issue"></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="callLimit">Calls (Optional)</label>
+                    <input type="number" id="callLimit" value="" min="1" max="1000" placeholder="No limit">
+                </div>
+                
+                <button id="runBtn" class="primary-btn" style="height: fit-content; align-self: flex-end;">
+                    <i data-lucide="play"></i>
+                    <span>Run Audit</span>
+                </button>
+            </div>
 
             <div class="dashboard-grid">
                 <!-- Metrics -->
@@ -75,8 +103,11 @@
 
                 <!-- Markdown Report -->
                 <div class="card report-card">
-                    <div class="card-header">
+                    <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                         <h2><i data-lucide="file-text"></i> Executive Summary</h2>
+                        <button id="exportPdfBtn" class="secondary-btn" style="padding: 4px 12px; border-radius: 4px; border: 1px solid #ccc; background: white; cursor: pointer;">
+                            <i data-lucide="download" style="width: 16px; height: 16px; display: inline-block; vertical-align: text-bottom;"></i> Export PDF
+                        </button>
                     </div>
                     <div id="markdownContent" class="markdown-body">
                         <div class="empty-state">
@@ -88,17 +119,22 @@
 
                 <!-- Data Table -->
                 <div class="card table-card">
-                    <div class="card-header">
+                    <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
                         <h2><i data-lucide="table"></i> Call Transcripts Breakdown</h2>
+                        <button id="exportCsvBtn" class="secondary-btn" style="padding: 4px 12px; border-radius: 4px; border: 1px solid #ccc; background: white; cursor: pointer;">
+                            <i data-lucide="download" style="width: 16px; height: 16px; display: inline-block; vertical-align: text-bottom;"></i> Export CSV
+                        </button>
                     </div>
                     <div class="table-responsive">
                         <table id="callsTable">
                             <thead>
                                 <tr>
                                     <th>Call ID</th>
+                                    <th>Agent Name</th>
                                     <th>AI Defect Category</th>
                                     <th>Sentiment</th>
-                                    <th>Summary</th>
+                                    <th style="width: 25%">Summary</th>
+                                    <th style="width: 35%">Transcript</th>
                                 </tr>
                             </thead>
                             <tbody>

@@ -14,9 +14,48 @@ const callsTableBody = document.querySelector('#callsTable tbody');
 const progressText = document.getElementById('progressText');
 
 let progressInterval;
+let globalCallsData = [];
+let globalSummaryMarkdown = "";
+
+async function loadDealerships() {
+    try {
+        const res = await fetch('/api/dealerships');
+        const dships = await res.json();
+        const container = document.getElementById('dealershipCheckboxes');
+        dships.forEach(d => {
+            const label = document.createElement('label');
+            const cb = document.createElement('input');
+            cb.type = 'checkbox';
+            cb.value = d;
+            cb.className = 'dealership-cb';
+            
+            label.appendChild(cb);
+            label.appendChild(document.createTextNode(' ' + d));
+            container.appendChild(label);
+        });
+    } catch(e) { console.error("Failed to load dealerships", e); }
+}
+document.addEventListener('DOMContentLoaded', loadDealerships);
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.custom-multiselect')) {
+        const dropdown = document.getElementById('dealershipCheckboxes');
+        if (dropdown) dropdown.classList.remove('show');
+    }
+});
 
 runBtn.addEventListener('click', async () => {
-    const limit = parseInt(callLimit.value) || 5;
+    const limitVal = parseInt(callLimit.value);
+    const limit = isNaN(limitVal) ? null : limitVal;
+    
+    // Gather checked dealerships
+    const cbs = document.querySelectorAll('.dealership-cb:checked');
+    const dealerships = Array.from(cbs).map(cb => cb.value);
+    
+    const startDate = document.getElementById('startDate').value;
+    const endDate = document.getElementById('endDate').value;
+    const customCategories = document.getElementById('customCategories').value || "Normal / No Issue";
     
     // UI Loading State
     runBtn.disabled = true;
@@ -48,7 +87,13 @@ runBtn.addEventListener('click', async () => {
         const response = await fetch('/api/audit', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ limit: limit })
+            body: JSON.stringify({ 
+                limit: limit,
+                dealerships: dealerships,
+                start_date: startDate ? startDate : null,
+                end_date: endDate ? endDate : null,
+                custom_categories: customCategories
+            })
         });
 
         if (!response.ok) {
@@ -56,6 +101,9 @@ runBtn.addEventListener('click', async () => {
         }
 
         const data = await response.json();
+        
+        globalCallsData = data.calls || [];
+        globalSummaryMarkdown = data.summary || "";
         
         // 1. Populate Metrics based on the returned CSV data
         const total = data.calls.length;
@@ -91,14 +139,16 @@ runBtn.addEventListener('click', async () => {
 
                 tr.innerHTML = `
                     <td><small>${call.call_id ? call.call_id.substring(0, 8) + '...' : 'N/A'}</small></td>
+                    <td>${call.agent_name || '-'}</td>
                     <td><span class="${badgeClass}">${call.category || 'Unknown'}</span></td>
                     <td>${call.sentiment || '-'}</td>
-                    <td>${call.summary || '-'}</td>
+                    <td><div style="max-height: 150px; overflow-y: auto;">${call.summary || '-'}</div></td>
+                    <td><div style="max-height: 150px; overflow-y: auto; font-size: 0.85rem; background: var(--bg-dark); padding: 8px; border-radius: 4px; border: 1px solid var(--border-color); white-space: pre-wrap;">${call.transcript || '-'}</div></td>
                 `;
                 callsTableBody.appendChild(tr);
             });
         } else {
-            callsTableBody.innerHTML = `<tr><td colspan="4" style="text-align:center;">No calls processed.</td></tr>`;
+            callsTableBody.innerHTML = `<tr><td colspan="6" style="text-align:center;">No calls processed.</td></tr>`;
         }
 
     } catch (error) {
@@ -116,4 +166,49 @@ runBtn.addEventListener('click', async () => {
         runBtn.disabled = false;
         loader.classList.add('hidden');
     }
+});
+
+// Export Handlers
+document.getElementById('exportCsvBtn').addEventListener('click', () => {
+    if (!globalCallsData || globalCallsData.length === 0) return alert("No data to export");
+    const headers = Object.keys(globalCallsData[0]);
+    const csvContent = [
+        headers.join(","),
+        ...globalCallsData.map(row => headers.map(fieldName => JSON.stringify(row[fieldName] || "")).join(","))
+    ].join("\n");
+    
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute("download", "audit_calls.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
+document.getElementById('exportPdfBtn').addEventListener('click', () => {
+    if (!globalSummaryMarkdown) return alert("No summary to export");
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    
+    // Strip basic markdown formatting for simple PDF text
+    const cleanText = globalSummaryMarkdown.replace(/[*_]/g, '').replace(/#/g, '');
+    const splitText = doc.splitTextToSize(cleanText, 180);
+    
+    doc.setFont("helvetica");
+    doc.setFontSize(11);
+    
+    // Handle pagination if text is very long
+    let y = 15;
+    for (let i = 0; i < splitText.length; i++) {
+        if (y > 280) {
+            doc.addPage();
+            y = 15;
+        }
+        doc.text(splitText[i], 15, y);
+        y += 6;
+    }
+    
+    doc.save("executive_summary.pdf");
 });

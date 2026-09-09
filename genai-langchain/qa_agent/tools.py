@@ -15,8 +15,8 @@ from dotenv import load_dotenv
 from google.cloud import bigquery
 import pandas as pd
 
-from schema import CallCategorization
-from sample_data import SAMPLE_CALLS
+from schema import create_dynamic_categorization_schema
+import re
 
 load_dotenv()
 
@@ -37,27 +37,52 @@ AGENT_STATE = {
 # Tool 1: Fetch Calls (Data Source)
 # ─────────────────────────────────────────────────
 @tool
-def fetch_calls(limit: int = 5) -> str:
-    """Fetches real call transcripts from the BigQuery outcomes table.
-    
-    Filters for agent_name="Morehead Honda".
-    Saves them to the internal system state.
+def fetch_calls(dealerships: list[str] = None, start_date: str = None, end_date: str = None, limit: int = None) -> str:
+    """Fetches real call transcripts from the BigQuery outcomes table using provided filters.
     
     Args:
-        limit: Maximum number of calls to fetch. Defaults to 50.
+        dealerships: Optional list of dealership agent_names to filter by.
+        start_date: Optional start date in YYYY-MM-DD format.
+        end_date: Optional end date in YYYY-MM-DD format.
+        limit: Maximum number of calls to fetch. Defaults to 5.
     """
     bq_client = bigquery.Client()
-    query = f"""
-        SELECT conversation_id, conversation_transcript, conversation_summary 
+    
+    base_query = """
+        SELECT conversation_id, conversation_transcript, conversation_summary, agent_name 
         FROM `fir-test-7d4bb.dialogflow_test_v3.unified_conversation_outcomes`
-        WHERE agent_name = 'Grove City Ford' AND current_conversation_outcome!='Calls Resolved'
+        WHERE current_conversation_outcome != 'Calls Resolved'
         AND conversation_transcript IS NOT NULL
-        LIMIT {limit}
     """
-    results = bq_client.query(query).result()
+    
+    conditions = []
+    job_config = bigquery.QueryJobConfig()
+    query_params = []
+    
+    if dealerships and len(dealerships) > 0:
+        conditions.append("agent_name IN UNNEST(@dealerships)")
+        query_params.append(bigquery.ArrayQueryParameter("dealerships", "STRING", dealerships))
+        
+    if start_date:
+        conditions.append("start_date_local >= @start_date")
+        query_params.append(bigquery.ScalarQueryParameter("start_date", "STRING", start_date))
+        
+    if end_date:
+        conditions.append("start_date_local <= @end_date")
+        query_params.append(bigquery.ScalarQueryParameter("end_date", "STRING", end_date))
+        
+    if conditions:
+        base_query += " AND " + " AND ".join(conditions)
+        
+    if limit is not None:
+        base_query += f" LIMIT {limit}"
+    
+    job_config.query_parameters = query_params
+    
+    results = bq_client.query(base_query, job_config=job_config).result()
     
     # Map to our standard dictionary format
-    calls = [{"call_id": row.conversation_id, "transcript": row.conversation_transcript, "summary": row.conversation_summary} for row in results]
+    calls = [{"call_id": row.conversation_id, "transcript": row.conversation_transcript, "summary": row.conversation_summary, "agent_name": row.agent_name} for row in results]
     
     AGENT_STATE["raw_calls"] = calls
     return f"Successfully fetched {len(AGENT_STATE['raw_calls'])} real calls from BigQuery. They are saved in internal state ready to be categorized."
@@ -77,7 +102,22 @@ def categorize_calls() -> str:
         return "No raw calls found. You must fetch calls first."
 
     llm = ChatGroq(model_name="openai/gpt-oss-20b", temperature=0.1, max_tokens=None)
-    evaluator = llm.with_structured_output(CallCategorization, include_raw=True)
+    
+    # Get custom categories from state (comma separated)
+    custom_categories_text = AGENT_STATE.get("audit_config", {}).get("custom_categories", "Normal / No Issue")
+    
+    # Parse by comma
+    category_names = []
+    for part in custom_categories_text.split(','):
+        clean_name = part.strip()
+        if clean_name and clean_name not in category_names:
+            category_names.append(clean_name)
+            
+    if "Normal / No Issue" not in category_names:
+        category_names.append("Normal / No Issue")
+        
+    DynamicCallCategorization = create_dynamic_categorization_schema(category_names)
+    evaluator = llm.with_structured_output(DynamicCallCategorization, include_raw=True)
     
     categorized = []
     total = len(calls)
@@ -95,10 +135,7 @@ def categorize_calls() -> str:
         
         prompt = f"""Analyze this customer service AI conversation transcript and categorize its behavior based strictly on these specific defects:
 
-- Ignoring and Suppressing Escalation Requests: When callers explicitly ask to speak to a person, consultant, or manager, the AI frequently ignores the request, drops into total silence, or snaps back into its standard automated script.
-- Severe Responsiveness Failures: The AI regularly stays silent for over 2 minutes after callers confirm their vehicle or pick a day like 'tomorrow'.
-- Erroneous Cancellations: When customers reply 'No' to an initial prompt asking if they want help booking an appointment, the AI mistakenly un-books and cancels their existing appointments.
-- Normal / No Issue: The conversation flowed fine without these major defects.
+{custom_categories_text}
 
 Call ID: {call['call_id']}
 Transcript:
@@ -115,9 +152,12 @@ Transcript:
             AGENT_STATE["token_usage"]["completion_tokens"] += usage.get("completion_tokens", 0)
             AGENT_STATE["token_usage"]["total_tokens"] += usage.get("total_tokens", 0)
             
-            # Inject the pre-existing summary from BigQuery
+            # Inject the pre-existing data from BigQuery
             final_data = parsed.model_dump()
+            final_data["call_id"] = call["call_id"]
+            final_data["agent_name"] = call["agent_name"]
             final_data["summary"] = call["summary"]
+            final_data["transcript"] = call["transcript"]
             
             categorized.append(final_data)
             print("Done ✅")
