@@ -97,7 +97,12 @@ runBtn.addEventListener('click', async () => {
         });
 
         if (!response.ok) {
-            throw new Error(`API Error: ${response.statusText}`);
+            let errorMsg = `API Error: ${response.statusText}`;
+            try {
+                const errData = await response.json();
+                if (errData && errData.detail) errorMsg = errData.detail;
+            } catch (e) {}
+            throw new Error(errorMsg);
         }
 
         const data = await response.json();
@@ -139,8 +144,10 @@ runBtn.addEventListener('click', async () => {
 
                 tr.innerHTML = `
                     <td><small>${call.call_id ? call.call_id.substring(0, 8) + '...' : 'N/A'}</small></td>
+                    <td><small>${call.timestamp || '-'}</small></td>
                     <td>${call.agent_name || '-'}</td>
                     <td><span class="${badgeClass}">${call.category || 'Unknown'}</span></td>
+                    <td><span class="${call.has_high_latency ? 'badge defect' : 'badge normal'}">${call.has_high_latency ? 'Yes' : 'No'}</span></td>
                     <td>${call.sentiment || '-'}</td>
                     <td><div style="max-height: 150px; overflow-y: auto;">${call.summary || '-'}</div></td>
                     <td><div style="max-height: 150px; overflow-y: auto; font-size: 0.85rem; background: var(--bg-dark); padding: 8px; border-radius: 4px; border: 1px solid var(--border-color); white-space: pre-wrap;">${call.transcript || '-'}</div></td>

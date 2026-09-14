@@ -36,18 +36,30 @@ def run_agent(user_message: str):
     })
 
     # The last message in the response is the agent's final answer
-    final_answer = response["messages"][-1].content
+    raw_content = response["messages"][-1].content
+    if isinstance(raw_content, list):
+        final_answer = "".join(
+            part.get("text", "") if isinstance(part, dict) else str(part)
+            for part in raw_content
+        )
+    else:
+        final_answer = str(raw_content)
     
     # ── AGGREGATE TOKENS ──
     from tools import AGENT_STATE
     orchestration_tokens = {"prompt": 0, "completion": 0, "total": 0}
     
     for msg in response["messages"]:
-        if hasattr(msg, "response_metadata") and "token_usage" in msg.response_metadata:
-            usage = msg.response_metadata["token_usage"]
-            orchestration_tokens["prompt"] += usage.get("prompt_tokens", 0)
-            orchestration_tokens["completion"] += usage.get("completion_tokens", 0)
-            orchestration_tokens["total"] += usage.get("total_tokens", 0)
+        usage = getattr(msg, "usage_metadata", None)
+        if not usage and hasattr(msg, "response_metadata"):
+            usage = msg.response_metadata.get("token_usage", {})
+        if usage:
+            p_toks = usage.get("prompt_tokens") or usage.get("input_tokens") or 0
+            c_toks = usage.get("completion_tokens") or usage.get("output_tokens") or 0
+            t_toks = usage.get("total_tokens") or (p_toks + c_toks)
+            orchestration_tokens["prompt"] += p_toks
+            orchestration_tokens["completion"] += c_toks
+            orchestration_tokens["total"] += t_toks
             
     total_prompt = orchestration_tokens["prompt"] + AGENT_STATE["token_usage"]["prompt_tokens"]
     total_completion = orchestration_tokens["completion"] + AGENT_STATE["token_usage"]["completion_tokens"]

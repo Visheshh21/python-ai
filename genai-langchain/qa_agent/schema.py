@@ -35,5 +35,6 @@ def create_dynamic_categorization_schema(category_names: list[str]):
         sentiment=(Literal["Positive", "Neutral", "Frustrated", "Angry"], Field(description="The emotional tone of the customer during the call.")),
         resolution=(Literal["Resolved", "Unresolved", "Escalated"], Field(description="Whether the customer's primary issue was resolved, remained unresolved, or was escalated to a human.")),
         key_issues=(list[str], Field(description="List of 1-3 specific issues the customer raised")),
+        has_high_latency=(bool, Field(description="True if the transcript timestamps indicate any delay of 20 seconds or more between the caller's turn and the agent's turn. False otherwise.")),
         __doc__="Schema for a single categorized call."
     )

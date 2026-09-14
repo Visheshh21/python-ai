@@ -32,8 +32,26 @@ def run_audit(req: AuditRequest):
 
         # Construct the user prompt dynamically
         dealership_text = ", ".join(req.dealerships) if req.dealerships else "all dealerships"
-        date_text = f" from {req.start_date} to {req.end_date}" if req.start_date and req.end_date else ""
-        prompt = f"Fetch {req.limit} calls for {dealership_text}{date_text}, categorize each one using the custom categories configured, store the results, and give me an executive summary with metrics and recommendations."
+        if req.start_date and req.end_date:
+            date_text = f" from {req.start_date} to {req.end_date}"
+            effective_end = req.end_date
+        elif req.start_date:
+            date_text = f" for date {req.start_date}"
+            effective_end = req.start_date
+        elif req.end_date:
+            date_text = f" up to {req.end_date}"
+            effective_end = req.end_date
+        else:
+            date_text = ""
+            effective_end = None
+
+        limit_text = f"Fetch EXACTLY {req.limit} calls" if req.limit else "Fetch ALL calls"
+        prompt = (
+            f"{limit_text} for {dealership_text}{date_text}. "
+            f"Ensure fetch_calls uses dealerships={req.dealerships or None}, start_date={repr(req.start_date)}, end_date={repr(effective_end)}, limit={req.limit}. "
+            f"Categorize each one using the custom categories configured. "
+            f"Store the results, and give me an executive summary starting with a Markdown table for metrics, followed by latency analysis and recommendations."
+        )
         
         # Run the LangGraph agent synchronously
         markdown_summary = run_agent(prompt)
@@ -43,8 +61,9 @@ def run_audit(req: AuditRequest):
         calls_data = []
         if os.path.exists(csv_path):
             df = pd.read_csv(csv_path)
-            # Fill NaN values with empty string to prevent JSON serialization errors
-            df = df.fillna("")
+            # Replace all NaN, NaT, and infinity with empty strings or None for safe JSON encoding
+            df = df.replace({float('nan'): None, float('inf'): None, float('-inf'): None})
+            df = df.where(pd.notnull(df), None)
             calls_data = df.to_dict(orient="records")
             
         return {
@@ -52,6 +71,8 @@ def run_audit(req: AuditRequest):
             "calls": calls_data
         }
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/api/progress")

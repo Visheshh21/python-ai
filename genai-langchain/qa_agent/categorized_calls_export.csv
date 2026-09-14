@@ -1,306 +1,214 @@
-call_id,category,sentiment,resolution,key_issues,agent_name,summary,transcript
-4609233c-d537-4d62-86ab-7024eb23a49a,Normal / No Issue,Neutral,Resolved,[],Dublin Hyundai,"The customer reached out to Dublin Hyundai for assistance with a service appointment. Serena, the call center agent, welcomed the customer and offered her help. The conversation indicates a focus on scheduling or managing the service appointment for the customer.",[2.23s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you like me to help you with your service appointment?
-74f7bf12-3241-45c3-8323-de7c7e5eb643,Normal / No Issue,Neutral,Unresolved,[],Dublin Hyundai,"The customer reached out to Dublin Hyundai for assistance with a service appointment. Serena, the call center agent, welcomed the customer and offered her help. The conversation indicates a focus on scheduling or managing the service appointment for the customer.",[2.56s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you like me to help you with your service appointment?
-5d105771-f159-47f1-93c4-cd328d793883,Normal / No Issue,Neutral,Unresolved,[],Dublin Hyundai,"The customer, Vessela, reached out to the call center for assistance with her vehicle. The agent welcomed her back and inquired about the specific issues or needs she had regarding her vehicle. The conversation indicates a focus on providing support and resolving any concerns Vessela may have.",[2.4s - Agent]: Welcome back vessela. How can I help with your vehicle today?
-fad2850a-73dd-45f8-819b-1e4f1febce8a,Discarding Escalation request,Frustrated,Unresolved,"['Claim declined', 'No response from prior agent', 'Decision on engine replacement']",Dublin Hyundai,"The customer contacted Dublin Hyundai regarding an unresolved issue with their Hyundai Sonata hybrid, specifically concerning an engine problem. The call center agent, Ron, informed the customer that their warranty claim for an engine replacement had been declined due to the warranty expiration. The customer was given the option to pay out of pocket for the repair, which would cost approximately $8,656.22, excluding diagnostic fees, and was advised to make a decision by the end of the week. The customer mentioned a family commitment that might delay their response, and Ron agreed to follow up later.","[2.52s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you like me to help with your service appointment?
-[9.01s - Caller]: No.
-[11.08s - Agent]: I understand how can I help you today?
-[16.03s - Caller]: Customer service.
-[19.04s - Agent]: I will transfer you to 1 of our service advisors please, hold on.
-[23.92s - Agent]: Thank you for calling Dublin. Hyundai if you know your party's extension press pound and then enter, thank you for calling Dublin. Hyundai. If you know your party's extension press pound and then enter their extension.
-[36.59s - Agent]: Otherwise please select from the following to create an appointment with our service department, press 1. If you would like to speak with our service department for a status update of your vehicle or to speak with an adviser press 2,
-[50.28s - Agent]: For parts, press 3.
-[52.33s - Agent]: For sales, press 4.
-[54.83s - Agent]: Thank you.
-[90.19s - Agent]: Call.
-[94.52s - Caller]: There.
-[99.08s - Caller]: Are.
-[100.81s - Agent]: Okay.
-[102.08s - Agent]: Um, she's actually no longer working here anymore.
-[105.43s - Caller]: Oh, what the heck?
-[108.53s - Caller]: Okay. Um, well maybe
-[108.77s - Agent]: Did you have your car here? Do you need to make an appointment?
-[112.12s - Caller]: no, um actually I've been waiting for her to get back to me um in regards of my
-[117.45s - Agent]: Gotcha, let me get someone else uh, Ron's here today. He'll be the 1 that will be able to help you, okay?
-[122.78s - Caller]: Oh, okay.
-[123.75s - Agent]: 1 moment, all new Hyundai and Genesis models, like the amazing 2026, Hyundai, Ionix 5, electric sedan with a range of up to 300.
-[124.57s - Caller]: Well.
-[134.61s - Agent]: Thanks for calling Dublin. Honda and Genesis Zona. How can I help you?
-[138.54s - Caller]: Hey Ron. Uh I think I spoke to you uh like last week or something, but I walked in there earlier was the 1, I had issues with my car and she was supposed to get back to me, but I haven't heard back from her and um,
-[154.34s - Caller]: I think my car, something was wrong with the engine, we try to go through the warranty and um,
-[159.76s - Agent]: Is it?
-[162.67s - Agent]: What's the name?
-[165.06s - Caller]: Chris.
-[166.87s - Agent]: Chris.
-[168.89s - Caller]: Yeah.
-[172.76s - Caller]: It was a Hyundai Sonata hybrid.
-[175.61s - Caller]: A white Honda Sonata hybrid.
-[202.24s - Agent]: Phone number is 7078536340, right?
-[207.01s - Caller]: Yes.
-[213.07s - Agent]: So your vehicle needs an engine replacement. Okay?
-[219.28s - Agent]: and uh,
-[219.53s - Caller]: What was that?
-[221.22s - Agent]: Your vehicle needs an engine replacement. Okay?
-[225.24s - Caller]: Car. Yeah.
-[225.42s - Agent]: And uh,
-[227.1s - Agent]: What happened is that we submitted a request.
-[231.24s - Agent]: To 100.
-[233.58s - Agent]: And they have actually declined the claim.
-[234.17s - Caller]: uhh,
-[238.14s - Agent]: So they will not be replacing the engine and the warranty for you.
-[244.17s - Agent]: You. And they so we submitted a Goodwill request for engine to be replaced under warranty.
-[251.03s - Agent]: But uh, they said that warranty on the engine is expired and they would not cover this unfortunately at this time. So the claim is declined.
-[251.71s - Caller]: right.
-[261.85s - Agent]: Um, polar actually
-[264.91s - Agent]: She?
-[267.12s - Agent]: She was working with us but she quit last week.
-[270.94s - Agent]: So all of our stuff is yeah so that's why we were not able to give you a call but I'm going through her paperwork slowly slowly.
-[271.8s - Caller]: Oh, no way.
-[279.9s - Agent]: So good that you called. But the engine has been declined. It needs an engine replacement.
-[285.29s - Agent]: So technically right now, the diagnostic fee applies on the car. That's 280.
-[295.58s - Agent]: You willing to, uh, get the vehicle fixed or what's the intention?
-[301.59s - Caller]: Uh well I guess I was cheering gonna wait to hear back on what?
-[308.09s - Caller]: I'm what I need to do.
-[310.89s - Caller]: Um,
-[313.0s - Caller]: I'm not too sure right now because it's my brother's car so I might have to get it towed, right? Or how how, how long can I do. I have to make a decision because I have to let him know.
-[324.85s - Agent]: Um, I'll give you time till this week, that's fine. So just just Just for information if you want to pay out of pocket for engine replacement,
-[328.77s - Caller]: Too. Okay.
-[335.06s - Agent]: Uh, the excluding diagnosis fee just the engine alone itself.
-[341.33s - Agent]: It's like almost 8,656.22 cents plus tax.
-[349.73s - Caller]: Okay.
-[350.76s - Agent]: That excludes the uh exclusively diagnosis fee.
-[355.8s - Agent]: so,
-[357.32s - Agent]: That's that's what it is if if you want to pay out of pocket. So give it a thought about it. Let me know what you want to do.
-[365.67s - Agent]: And then, um, I'll probably follow up again with you sometimes this week, maybe by Wednesday.
-[370.77s - Caller]: Okay.
-[371.89s - Agent]: And then if you want to come and pick it up, then you can totally fill out before. Um,
-[372.34s - Caller]: Okay.
-[376.55s - Agent]: uh, before Thursday, I would say
-[379.39s - Agent]: to avoid any storage piece.
-[379.87s - Caller]: Okay.
-[385.03s - Caller]: Okay, let me uh, let me follow up. Um, I do have to go to um
-[390.9s - Caller]: Unfortunately, I have a funeral that I have to go to on Thursday from a family member. So, um,
-[396.96s - Caller]: uh,
-[398.39s - Caller]: I will.
-[400.93s - Caller]: let you know, but it might be like Friday, Saturday, maybe
-[405.64s - Agent]: Saturday. Okay, that's fine. In that case. You can hold on. Then I've got some credit for today. I'm off.
-[410.33s - Agent]: Okay, Friday, and Saturday. I'm off, you can take this week, think about it. Let me know, I'll follow up with you next week, Sunday, and then you can let me know what you want to do.
-[410.9s - Caller]: Okay.
-[414.5s - Caller]: Okay.
-[419.09s - Caller]: Okay, thank you. I appreciate it.
-[421.09s - Agent]: I thank you sir. You have a good 1, okay.
-[423.78s - Caller]: You too. Take care. Bye."
-e2a71717-2eee-43f5-9adc-d8d2ea243039,Discarding Escalation request,Frustrated,Unresolved,"['Requested to talk to a human', 'Confusion about closing hours']",Dublin Hyundai,"The customer contacted Dublin Hyundai seeking assistance with a service appointment but was informed by the agent, Serena, that the office was closed. Serena offered to help schedule an appointment for another day or suggested the customer call back during business hours. After some confusion, the customer requested to be transferred back to the menu options for further assistance.","[1.72s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you like me to help you with your service appointment?
-[8.37s - Caller]: Can I talk to an actual person please?
-[11.93s - Agent]: I'm sorry we're closed right now so our team isn't available outside of business hours. I'd be happy to help you book an appointment for another day or you're welcome to call us back during our regular business hours. How would you like to proceed?
-[18.03s - Caller]: What?
-[24.23s - Caller]: What I thought you guys closed at 5.
-[27.54s - Agent]: I see we are closed on Sundays but we can book an appointment for you for another day. Were you looking to schedule something for this week?
-[33.23s - Caller]: Okay.
-[35.56s - Caller]: Can you send me back to the menu, please?
-[38.96s - Agent]: I will transfer you to 1 of our service advisors please, hold on.
-[45.71s - Agent]: Thank you for calling Dublin. Hyundai if you know your party's extension press pound and then enter their extension.
-[52.58s - Agent]: Otherwise please select from the following to create an appointment with our service department, press 1. If you would like to speak with our service department for a status update of your vehicle or to speak with an adviser press 2,
-[66.22s - Agent]: For parts, press 3."
-1961d448-b3ca-4e8c-b1b6-d50205068338,Normal / No Issue,Frustrated,Unresolved,"['Oil change request', 'Mileage input confusion']",Dublin Hyundai,"The customer confirmed they have a 2025 Genesis GV80 and would like to schedule a service appointment. They mentioned the mileage as 14,000 but did not specify the services needed. The agent asked for clarification on the services the customer wants to schedule.","[1.29s - Caller]: Oh, oil.
-[2.54s - Agent]: Welcome back fesa. I see you have 1 vehicle. A 2025 Genesis gv80. Is that the 1 you'd like to schedule for
-[11.25s - Caller]: Yes.
-[14.56s - Agent]: And what mileage would you like to list for it?
-[20.53s - Agent]: Perfect. What services would you like to schedule for?
-[21.84s - Caller]: 14,000.
-[41.96s - Caller]: Hello.
-[44.99s - Agent]: I'm, I didn't quite catch that. What services are you looking to schedule for?"
-809d06b5-2f18-403b-b984-389e97cf08b1,Discarding Escalation request,Frustrated,Unresolved,"['Unable to schedule Saturday', 'No available slot', 'Escalation request not handled']",Dublin Hyundai,"The customer, Emilio Lopez, contacted Dublin Hyundai to schedule a service appointment for his 2019 Hyundai Tucson, which has almost 52,000 miles. The agent, Serena, confirmed the routine maintenance services, including an oil and filter change and tire rotation. However, she was unable to find available appointment slots on the requested Saturdays, suggesting alternative dates that Emilio could not accommodate, leading him to decide to call back later.","[2.34s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you like me to help you with your service appointment?
-[9.33s - Caller]: Yes.
-[11.18s - Agent]: I see your number in our system but I don't have your name on file. Could I get your full name, please?
-[17.79s - Caller]: Yes. E m. I l i o
-[22.07s - Agent]: And could I get your last name as well?
-[25.49s - Caller]: L o p. E z.
-[29.03s - Agent]: Thanks Emilio. It looks like you have 1 vehicle on file a 2017. Toyota Camry. Is that the vehicle you're calling about
-[37.63s - Caller]: No.
-[39.67s - Agent]: No problem. What year make and model is the vehicle.
-[45.37s - Caller]: 29 Hyundai Tucson.
-[49.61s - Agent]: Got it. Uh, 2019 Tucson. What mileage does it have?
-[56.11s - Caller]: Almost 52,000.
-[59.9s - Agent]: Perfect. What services would you like to pickle?
-[64.76s - Caller]: Routine maintenance.
-[67.08s - Agent]: For a routine maintenance. We typically include an oil and filter service and a rotate tires. Would you like me to go ahead and add those?
-[75.3s - Caller]: Yes.
-[78.9s - Agent]: Great on the day of your appointment. Will you be providing your own transportation using our shuttle service or waiting here in our lunch?
-[88.31s - Caller]: Uh, I will have my own transportation.
-[91.84s - Agent]: Perfect. What date and time works real?
-[97.55s - Caller]: next Saturday at 7 a.m.
-[101.52s - Agent]: Hmm, it looks like I don't have any openings left for that day. How about Monday, August 24th at 7 a.m.
-[110.3s - Caller]: how about the following Saturday?
-[114.83s - Agent]: it looks like I don't have any openings left for that day. Either. How about Monday August 31st at 7 a.m.
-[124.24s - Caller]: I'll have to call back when with, uh, to speak to a person later.
-[129.36s - Agent]: I'm sorry we're actually closed right now. Our team isn't available outside of business hours. I'd be happy to help you book an appointment for another day.
-[138.79s - Caller]: I can only do Saturday.
-[141.52s - Agent]: I understand you're welcome to call us back during our regular business hours. Is there anything else? I can help you with today?
-[149.02s - Caller]: That was it?
-[151.09s - Agent]: Have a great day."
-662109df-51d5-4b1c-a08a-abf4a370b3c2,Discarding Escalation request,Frustrated,Unresolved,"['Replacement skid plate', 'Scheduling service appointment', 'Request to speak with representative']",Dublin Hyundai,"The customer, John Choi, contacted Dublin Hyundai to schedule a service appointment for his 2026 Hyundai Elantra, specifically to replace a skid plate that was damaged on the highway. Initially, there was confusion as the agent mistakenly referenced a Honda Civic, which John clarified he did not own. After confirming his vehicle details, the agent offered to transfer him to a service advisor for further assistance, and John provided his contact information for a callback regarding the replacement part.","[1.95s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you like me to help you with your service appointment?
-[9.91s - Caller]: Uh yeah. I would
-[12.55s - Agent]: Great. I see your number in our system but I don't have your name on file. Could I get your full name, please?
-[20.78s - Caller]: Um yeah, John Michael jinu choy.
-[27.33s - Agent]: Thanks, John. It looks like you have 1 vehicle on file a 2018. Honda Civic is that the 1 you need help with
-[35.88s - Caller]: What, no?
-[38.64s - Agent]: I understand what vehicle do you need service for?
-[41.92s - Caller]: Is this Hyundai or Honda?
-[46.56s - Agent]: This is Dublin Hyundai. How can I help you with your vehicle?
-[52.17s - Caller]: I I don't have a Civic.
-[55.93s - Agent]: No problem. What year make and model is your vehicle?
-[62.21s - Caller]: 2026 Hyundai Elantra. N.
-[69.96s - Agent]: Perfect and about how many miles are on your Hyundai, AA.
-[75.89s - Caller]: I don't know, like just under 5000.
-[80.52s - Agent]: Got it. What services would you like to schedule today?
-[86.97s - Caller]: My skid plate got ripped off on the highway so I was hoping I could get a replacement.
-[94.42s - Agent]: Okay, for your appointment, you can provide your own transportation, or we have a complimentary shuttle which works best for you.
-[104.68s - Caller]: Um, I think I'll transport myself.
-[110.64s - Agent]: Sounds good. And when would you like to schedule your appointment?
-[118.48s - Caller]: Uh, I I don't know. Can I can I talk to a representative?
-[124.29s - Agent]: I will transfer you to 1 of our service advisors please, hold on.
-[129.27s - Agent]: Thank you for calling Dublin. Hyundai if you know your party's extension press pound and then enter their extension.
-[135.98s - Agent]: Otherwise please select from the following to create an appointment with our service department, press 1. If you would like to speak with our service department for a status update of your vehicle or to speak with an adviser press 2,
-[149.78s - Agent]: For parts, press 3.
-[151.93s - Agent]: For.
-[179.57s - Agent]: Genesis, I'm a director of call.
-[186.84s - Caller]: Hi. Um, I was hoping to speak with the service department, maybe like a representative.
-[192.79s - Agent]: Okay, can you help me your name and number? Because right now, he's by himself, and I have 2 callers on hold so he can just call you back.
-[199.61s - Caller]: Okay.
-[200.88s - Agent]: What is your name, sir?
-[201.31s - Caller]: Um yeah my name is John uh my name is John Choi c, h o. I
-[205.92s - Agent]: John.
-[207.51s - Agent]: Okay, and your phone number. John.
-[210.82s - Caller]: uh, 925
-[212.68s - Agent]: Mhm.
-[213.23s - Caller]: 487.
-[215.55s - Caller]: 3542.
-[217.85s - Agent]: Okay, and this is regarding
-[221.66s - Caller]: Um, I I I was hoping to get a replacement part for my Elantra cuz my, um, my skid plate. Got ripped off when I was on the highway last night.
-[234.0s - Agent]: okay, I think this is
-[237.51s - Agent]: a parts replacement parts.
-[240.52s - Agent]: But I will have him call you back.
-[241.47s - Caller]: Okay.
-[242.75s - Agent]: Yeah.
-[244.08s - Caller]: All right. Okay, thank you so much.
-[244.73s - Agent]: And he can order parts for you if needed. Yeah. Okay, John, thank you."
-8e6e754d-eb6c-4629-93bf-a1b8962883dd,Normal / No Issue,Neutral,Resolved,"['Customer requested to speak with a specific agent (Sean)', 'Agent transferred to service advisor', 'Customer waiting for agent availability']",Cardinal Kia,"The customer called to inquire about the status of their vehicle, which they had brought in for service the previous day. The call center agent initially attempted to transfer the customer to Sean, the service advisor, but he was unavailable. The agent informed the customer that the work on their vehicle was still ongoing and promised to relay the message for Sean to call them back once he was available.","[2.45s - Agent]: A welcome to Cardinal. Kia. This is your assistant. How can I help you with your vehicle today?
-[7.54s - Caller]: Could I ask speak with Sean please?
-[11.0s - Caller]: Service.
-[11.45s - Agent]: I will transfer you to 1 of our service advisors please. Hold on.
-[15.8s - Caller]: Thank you.
-[20.5s - Agent]: Good morning service. This is Jan speaking.
-[22.81s - Caller]: Yes. Is uh Sean there?
-[25.23s - Agent]: He's with a customer right now. Is there something I can assist you with?
-[28.02s - Caller]: I was just wondering about a vehicle. I would, we will select their yesterday.
-[33.5s - Caller]: so,
-[33.73s - Agent]: You left you brought a vehicle in yesterday.
-[36.28s - Caller]: Yeah.
-[37.27s - Agent]: Okay, let's
-[38.96s - Agent]: see if I can find out something for you.
-[46.85s - Agent]: Douglas fatigue 1.
-[48.03s - Caller]: Again.
-[48.79s - Agent]: Okay.
-[60.11s - Agent]: There's still looks like there's still working on it. Um, the work order is still open. So what I'll do is once he's back at his desk, I'll um,
-[69.02s - Agent]: Relay the message for him to reach out. Yeah. Okay, we can do that.
-[69.42s - Caller]: Yeah, I asked him to give me a call or whatever.
-[72.38s - Caller]: That would be great. Okay, thank you. Bye, bye.
-[74.14s - Agent]: All right, you're welcome. Douglas. Bye for now."
-3447301b-beba-4d83-afe8-78fb85f4b2dc,Discarding Escalation request,Frustrated,Unresolved,"['Failed to transfer to service advisor', 'Generic hold message', 'Recall information not addressed']",Cardinal Kia,"The customer, Connie, called Cardinal Kia to inquire about a service advisor named George. She mentioned receiving a call regarding a recall on her 2012 Kia vehicle. The call center agent informed her that they would transfer her to a service advisor but also noted that they were currently unable to answer the phone and requested a message if needed.","[2.7s - Agent]: Welcome to Cardinal Kia. This is your assistant. How can I help you with your vehicle today?
-[7.98s - Caller]: Is there a George there?
-[12.08s - Agent]: I will transfer you to 1 of our service advisors please, hold on.
-[18.23s - Agent]: Thank you for calling Cardinal Kia service department.
-[21.65s - Agent]: We're open Monday to Friday, 7 a.m. to 6:00 p.m.
-[25.73s - Agent]: We can't get to the phone right now, but please leave us a message and we'll get back to you as soon as we can.
-[31.96s - Caller]: I just got a call about 15 minutes ago for my George. S is a recall on my 2000.
-[39.22s - Caller]: 12 Keough.
-[42.04s - Caller]: My name's Connie 9052958868."
-78b5b6a0-99d0-45e1-beec-0bca1ba76634,Discarding Escalation request,Frustrated,Unresolved,"['Recall availability confirmation', 'Escalation request not fulfilled', 'Service duration inquiry']",Dublin Hyundai,"The customer, Swang, contacted the call center to schedule a recall service for their 2023 Genesis GV80. After confirming the appointment for August 19th at 11:00 a.m., the customer expressed concerns about the availability of the necessary parts for the recall service. The agent reassured Swang that the parts are now available and estimated the service would take about 3 to 4 hours, allowing the customer to drop off the vehicle and return the next day for pickup.","[2.1s - Agent]: Welcome back. Swang, would you like me to help you with your service appointment?
-[7.81s - Caller]: Uh, yes.
-[10.12s - Agent]: I see you have a 2023 Genesis gv80 is that the vehicle you'd like to bring in.
-[16.45s - Caller]: Yes.
-[20.83s - Agent]: Great. And about how many miles.
-[26.18s - Caller]: Um,
-[28.44s - Caller]: 30 something, I'm not sure.
-[30.59s - Agent]: No problem at all. Is there a service you'd like to schedule?
-[35.68s - Caller]: Yes. Uh, the week I received the letter for the recall so that's why I want to.
-[41.03s - Caller]: I want to schedule for.
-[43.25s - Caller]: Pick together before. So
-[47.1s - Agent]: Got it for the recall service. You could provide your own transportation or you could take our shuttle, which works better for you.
-[55.55s - Caller]: Uh, I will take my I I dropped the card in the next week, come back to pick up.
-[63.33s - Agent]: Sounds good. You'll be dropping off your vehicle. What day would you like to schedule this for
-[69.61s - Caller]: On the 19th.
-[72.56s - Caller]: In the morning.
-[75.75s - Agent]: I have an opening at 7 a.m. or 7:15 a.m. which 1 works better for you.
-[81.62s - Caller]: Uh, after 10:00.
-[85.43s - Agent]: I have an opening at 11:00 a.m. or 11:15 a.m. which 1 works better for you.
-[90.32s - Caller]: 11.
-[94.09s - Agent]: So just to confirm, we have a recall service scheduled for your 2023. Genesis TV 80 on Wednesday, August 19th, at 11:00 a.m. and you'll be dropping it off. Does that all sound correct?
-[106.05s - Caller]: Yes.
-[110.53s - Agent]: Perfect. Your appointment is booked. How is your experience today? Was there anything that could have been better?
-[116.91s - Caller]: Uh, can you tell the specialist call me back and make sure the the recall service available?
-[122.91s - Caller]: So we can last time I I think in the the the recall is not available yet.
-[128.39s - Caller]: so, I just want to make sure I need to talk to the
-[129.28s - Agent]: I will transfer you to 1 of our service advisors please, hold on.
-[133.36s - Caller]: but nobody pick up phone, you change for me few times already but nobody pays for
-[135.17s - Agent]: Thank you for calling Dublin. Hyundai if you know your party's extension press pound and then enter their extension.
-[141.89s - Agent]: Otherwise please select from the following to create an appointment with our service department, press 1. If you would like to speak with our service department for a status update of your vehicle or to speak with an adviser,
-[190.29s - Agent]: Hyundai service.
-[193.61s - Caller]: uh yes, I just make appointment for the
-[197.64s - Caller]: For my TV service.
-[201.82s - Caller]: But I try to call you guys yesterday from today, a lot of time. But what if you come for now, you make a phone.
-[207.56s - Agent]: Thank you. Okay. See, you just need an appointment done.
-[212.59s - Caller]: Uh, I I I just said, I somebody uh, I just call and uh, have a appointment for the night team, 11:00 a.m., but I just want to make sure because I received the the letter for the recall for my Genesis 2023 TV. 80 is available right now for the recall service, right?
-[228.55s - Agent]: Oh, okay.
-[231.94s - Agent]: Let's see.
-[233.62s - Agent]: Give me 1 quick second.
-[233.98s - Caller]: Yeah, be joyful. Wait for our yeah.
-[237.1s - Agent]: Yeah. Yeah. Give me 1 quick second.
-[238.36s - Caller]: Because last time you yeah, yeah, yeah.
-[243.01s - Agent]: We know your call is waiting and we'll be connecting you shortly. Dublin. Hyundai and Genesis of Dublin is the tri valley show place for Hyundai and Genesis where we're doing it, right? Every day. You're invited to take a test drive, you won't be disappointed. We know your call is waiting, we'll be connecting you in just a moment.
-[267.38s - Agent]: you'll find it hard to beat the style and performance of the all-new Hyundai and Genesis models, like the amazing 2026 Hyundai Ionix 5, electric sedan,
-[278.17s - Agent]: Yeah, we can get uh we can start the recall. We have to do an inspection on it first.
-[285.37s - Caller]: Uh, I'm sorry.
-[287.77s - Agent]: For the recall, we can do it when you come in.
-[288.37s - Caller]: Can you repeat again?
-[291.7s - Caller]: Yes.
-[297.48s - Caller]: uh okay, yeah, because last time I coming and you guys say you don't have the park yet,
-[301.96s - Caller]: so but now I I I received the new letter, this, say the park available asked me to call as soon as possible for the
-[306.68s - Agent]: Yeah, it's it's available now.
-[310.18s - Agent]: Yeah, it's available now.
-[310.33s - Caller]: Okay. Uh, but how long, how long, how, how long you guys will need to do it for the call? Because uh, I I need to try it over an hour to your dealer. So I want to make sure uh how long you need the service for my car. So either I can come back to pick up next day or wait for, so that's why I want to know so I can uh, take off for my deal.
-[332.52s - Agent]: Yeah, for that. You're probably looking at about 3 to 4 hours but it could be less.
-[339.06s - Caller]: Okay. It mean I I can I have a schedule from 19 next Wednesday on 11 so I can I I will drop the car there and then I will come, come back the next day to pick it up. It's okay.
-[349.93s - Agent]: Okay, yeah, yeah. Just bring it up to the advisor when you come in and you should be all set.
-[356.02s - Caller]: Yeah, and tell them I I will come back to pick up next day, right?
-[359.32s - Agent]: Okay, yeah, that works. Thank you.
-[361.19s - Caller]: Okay. Yeah. Can you check for me and make sure I have a schedule because uh, I think that AI make a schedule.
-[365.76s - Agent]: Yeah, you are scheduled for the 19th at 11:00.
-[369.94s - Caller]: Okay, thank you. Thank you very much. Thank you. Bye.
-[371.67s - Agent]: Thank you. Bye."
-d819eb05-3592-4295-9c60-bccfdaeed83f,Latency 30s,Frustrated,Resolved,"['Transfer to live agent', 'Tire balancing price', 'Appointment scheduling']",Dublin Hyundai,"The customer contacted the call center to request a service appointment for tire balancing. The agent informed the customer that the cost for a four-wheel balance is $89.95 and explained that while walk-ins are generally difficult, the customer could drop off the vehicle and pick it up later in the day. The customer agreed to the drop-off option and thanked the agent before ending the call.","[2.05s - Agent]: Welcome to Devlin day. This is Serena. Would you like me to help you with your service appointment?
-[13.44s - Caller]: Uh, transfer me to a live agent.
-[16.92s - Agent]: I will transfer you to 1 of our service advisors please. Hold on.
-[22.74s - Agent]: Thank you for calling Dublin. Hyundai if you know your party's extension press pound and then enter their extension.
-[29.5s - Agent]: Otherwise please select from the following to create an appointment with our service department, press 1. If you would like to speak with our service department for a status update of your vehicle or to speak with an adviser,
-[44.88s - Agent]: Service, appointment. 24 hours a day on.
-[48.71s - Agent]: Hi, thanks for calling Genesis. Sorry. I'm with the customer right now.
-[51.98s - Agent]: What's your brief hold? Okay, we'll be with you shortly.
-[55.81s - Caller]: Yeah. Yeah, yeah. Sure.
-[57.63s - Agent]: Thank you.
-[59.49s - Agent]: You can connect your call.
-[64.76s - Agent]: We invite you to visit our spectacular Showplace, giving you our customers a luxurious welcoming atmosphere to take the stress out of buying a new car. Thanks for holding, we'll be connecting you shortly.
-[82.76s - Agent]: We know your call is waiting and we'll be connecting you shortly. Dublin. Hyundai and Genesis of Dublin is the tri valley Showplace for Hyundai and Genesis where we're doing it, right? Every day. You're invited to take a test drive, you won't be disappointed.
-[100.51s - Agent]: Thanks for holding. This is Ron. I can help you
-[103.87s - Caller]: Oh hi sorry. I'm just looking to get a tire service. Uh how much for balancing tires, 4-wheel balance for a policy.
-[111.98s - Agent]: 89.95.
-[115.68s - Caller]: It 89.95 you open for walk-in.
-[120.21s - Agent]: Uh, well, uh, Walken is going to be difficult because we work on appointments, but if you are planning to just drop the vehicle and pick up late in the day in the afternoon, then yes.
-[132.55s - Caller]: Drop off. Okay, yeah, I can do the drop off. I'll check it again. Thank you.
-[137.38s - Agent]: Thank you. Bye."
-f3aa2713-e50a-41aa-a71a-aa88c5957a3e,Discarding Escalation request,Frustrated,Unresolved,"['Escalation request not handled', 'Incomplete response', 'Miscommunication']",Dublin Hyundai,"The customer called Dublin Hyundai seeking assistance but initially requested to speak with an agent. The call center agent, Serena, attempted to transfer the customer to a service advisor. However, the customer clarified that they specifically wanted to speak with the receptionist in customer service.","[2.41s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you me to help you with your service appointment?
-[8.54s - Caller]: I need to speak with an agent.
-[11.66s - Agent]: I will transfer you to 1 of our service advisors please, hold on.
-[15.68s - Caller]: No, I need to speak with the customer service. I need to speak with the receptionist.
-[18.65s - Agent]: Thank you for calling Dublin. Hyundai, if, you know your party's"
+call_id,category,sentiment,resolution,key_issues,has_high_latency,agent_name,timestamp,summary,transcript
+6e95ab76-d4c4-496e-ac77-ca1391e3a437,Agent Misunderstood User,Neutral,Unresolved,"['Checking for vehicle recalls', 'Checking pending maintenance status', 'Unwanted service appointment scheduling']",False,Dublin Hyundai,2026-08-09,"The customer, Manoj, called Dublin Hyundai to inquire about his 2026 Hyundai Palisade, confirming it is a gas vehicle with 500,000 miles. He wanted to check for any pending maintenance or recalls rather than schedule a specific service. The agent, Serena, confirmed that she could assist with a general maintenance check and offered options for transportation on the day of the appointment.","[0.88s - Caller]: Welcome back to my message.
+[2.2s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you like me to help you with your service appointment?
+[10.58s - Caller]: What can I say other than you're welcome?
+[10.66s - Agent]: Hello Manoj. Welcome back. I see you have a 2026 Hyundai. Palisade is that the vehicle you're calling about.
+[20.1s - Caller]: Yes. But what can I say without saying you you are welcome.
+[27.09s - Agent]: That's very kind of you to say. I am happy to help is your Palisade, an electric vehicle, or a gas.
+[36.88s - Caller]: It's a 2026 palisad, good vehicle vehicle. So
+[42.89s - Caller]: is it a gas or electric?
+[46.87s - Agent]: It is gas. Got it. And can you tell me the mileage on it?
+[48.03s - Caller]: Say 1.
+[54.63s - Caller]: It's
+[56.88s - Caller]: 500,000.
+[61.26s - Agent]: 500,000 miles. Great. What service would you like to schedule today?
+[70.76s - Caller]: No service is required. I just want to check if there's anything pending
+[76.13s - Caller]: in terms of maintenance,
+[79.16s - Caller]: Or any.
+[81.5s - Caller]: Recalls on my vehicle.
+[82.19s - Agent]: I can help with that. Is there a specific service? You're looking for? Or were you looking for general maintenance?
+[90.26s - Caller]: General maintenance.
+[105.67s - Caller]: Syria, are you there?
+[109.21s - Agent]: Perfect. We have you down for a maintenance, check on the day of your appointment. You could provide your own transportation or take our shuttle which works better for you."
+cc4ae6f3-34f7-4fb8-a5da-1ea7e9759161,Normal / No Issue,Neutral,Unresolved,['Service appointment inquiry'],False,Dublin Hyundai,2026-08-09,"The customer reached out to Dublin Hyundai for assistance with a service appointment. Serena, the call center agent, welcomed the customer and offered her help. The conversation indicates a focus on scheduling or managing the service appointment for the customer.",[2.1s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you like me to help you with your service appointment?
+7e7fb446-1b18-4b3a-9c83-8acd91b93e2e,Normal / No Issue,Neutral,Unresolved,[],False,Dublin Hyundai,2026-08-09,The call center agent welcomed the customer back and offered assistance with their service appointment. The agent was ready to help with any questions or concerns the customer might have regarding the appointment. The interaction indicates a focus on customer service and support.,[1.84s - Agent]: Welcome back MOS. Would you like me to help you with your service appointment?
+a4131ab1-7af4-4491-9f98-530d4c6eb92c,Normal / No Issue,Neutral,Unresolved,['Service appointment inquiry'],False,Dublin Hyundai,2026-08-09,"The customer reached out to Dublin Hyundai for assistance with a service appointment. Serena, the call center agent, welcomed the customer and offered her help. The conversation indicates a focus on scheduling or managing the service appointment for the customer.",[1.99s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you like me to help you with your service appointment?
+6e520a07-05ae-4cd1-9e73-e8c7ed21b696,Normal / No Issue,Neutral,Escalated,"['Scheduling regular oil change', 'Inquiring about service wait time']",False,Dublin Hyundai,2026-08-09,"The customer called Dublin Hyundai to schedule a service appointment for their 2026 Hyundai Santa Fe, which has approximately 8,000 miles. They requested a regular oil change but were informed that waiting for the service is not an option; they would need to use a shuttle or provide their own transportation. The agent offered to connect the customer with a service advisor for more precise timing information, and the call was then transferred to the service department.","[2.42s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you like me to help you with your service appointment?
+[8.87s - Caller]: Yes.
+[11.1s - Agent]: I see you have a 2026 Hyundai Santa Fe is that the vehicle calling about
+[16.7s - Caller]: Yes.
+[20.68s - Agent]: Perfect. And just so I know what's the approximate mileage on that?
+[26.84s - Caller]: 8,000.
+[30.11s - Agent]: Got it. What service would you like to schedule?
+[35.62s - Caller]: 8,000.
+[38.11s - Agent]: I see what service can I help you with today?
+[43.41s - Caller]: Regular oil change.
+[48.13s - Agent]: Okay, we've added those services.
+[50.39s - Agent]: For transportation. On the day of your appointment, you could provide your own transport or we have a shuttle, which would you prefer.
+[60.49s - Caller]: I will wait.
+[62.73s - Agent]: I'm sorry, weeding is not available for these Services. You would need to use the shuttle or provide your own transportation, which works.
+[73.71s - Caller]: How many hours?
+[76.57s - Agent]: I don't have that timing information on hand. Would you like me to connect you with 1 of our service advisors who can give you an exact estimate?
+[82.67s - Caller]: Yes.
+[87.99s - Agent]: I will transfer you to 1 of our service advisors please, hold on.
+[93.13s - Agent]: Thank you for calling Dublin. Hyundai if you know your party's extension press pound and then enter their extension.
+[99.86s - Agent]: Otherwise please select from the following to create an appointment with our service department, press 1. If you would like to speak with our service department for a status update of your vehicle or to speak with an adviser press 2,
+[113.68s - Agent]: For parts, press 3.
+[116.52s - Agent]: Hi. You've reached the service department at Dublin, Hyundai, we're either helping other customers, or it's outside our normal business hours, please leave a message, and we'll return your call as soon as possible have a great day.
+[133.21s - Agent]: Invalid entry for help. Press star H, recording stopped. Nothing to approve for help press star."
+3e6e68f6-d284-44ff-b83e-4e951098e817,Normal / No Issue,Neutral,Unresolved,"['Scheduling service appointment', 'Routine maintenance']",False,Dublin Hyundai,2026-08-09,"The customer contacted Dublin Hyundai to schedule a service appointment for their 2026 Hyundai Santa Fe, which has approximately 8,193 miles. The call center agent, Serena, confirmed the vehicle details and inquired about the type of service needed. The customer requested routine maintenance, and the agent offered to include an oil and filter service in the appointment.","[1.67s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you like me to help you with your service appointment?
+[8.17s - Caller]: Yes.
+[10.24s - Agent]: I see you don't have any vehicles on file with us. Could you tell me the year make and model of your vehicle?
+[18.99s - Caller]: Hyundai Santa Fe 2026.
+[24.4s - Agent]: Perfect, a 2026 Hyundai Santa Fe, and what is the approximate mileage?
+[31.8s - Caller]: 8,193.
+[36.8s - Agent]: Got it. What service would you like to schedule?
+[41.41s - Caller]: Maintenance.
+[43.61s - Agent]: For routine maintenance. We typically include an oil and filter service. Would you like me to add that?"
+af7aa448-c796-41d9-87a1-a9fc16710cdf,Agent Misunderstood User,Frustrated,Escalated,"[""Car won't start or drive"", 'Request for a loaner car for tomorrow', 'Difficulty scheduling service appointment']",False,Dublin Hyundai,2026-08-09,"John Green called Dublin Hyundai regarding ongoing issues with his 2023 Hyundai Santa Fe, which he cannot drive due to a starting problem. The agent, Serena, offered to arrange a shuttle service for him, but John insisted on speaking to a service advisor. After being transferred, John explained that his vehicle had been in the shop previously without resolution, and the advisor recommended contacting Hyundai roadside assistance to tow the car in for diagnostics and potential battery replacement.","[2.36s - Agent]: Welcome to Dublin Hyundai. This is Serena. Would you like me to help you with your service appointment?
+[9.98s - Caller]: Hi. This is John Green.
+[14.41s - Caller]: I'm calling in regards to my 2023.
+[15.56s - Agent]: Welcome back. John, I see you have a 2023 Hyundai Santa Fe that we can schedule for. Is that the right 1?
+[23.3s - Caller]: Yes, that's it. I'm still having problems with it.
+[27.84s - Agent]: Got it since you can't. Wait, we have options for you to drop it off or use, our complimentary shuttle, which would you prefer?
+[36.45s - Caller]: I can't drop it off. I can't even drive it. No problem.
+[39.95s - Agent]: I see, in that case, we can arrange a shuttle for you. What day were you looking for an appointment?
+[50.09s - Caller]: No, I need a car for tomorrow.
+[54.11s - Agent]: for tomorrow, I have an opening at 7:15 a.m. or you could do 7:30 a.m. which 1 works best
+[62.44s - Caller]: No, no, no, no, no. I want you to talk to someone.
+[67.01s - Agent]: I will transfer you to 1 of our service advisors please, hold on.
+[72.58s - Agent]: Thank you for calling Dublin. Hyundai if you know your party's extension press pound and then enter their extension.
+[82.09s - Agent]: Otherwise please select from the following to create an appointment with our service department, press 1. If you would like to speak with our service department for a status update of your vehicle or to speak with an adviser press 2,
+[95.72s - Agent]: For parts, press 3.
+[104.37s - Caller]: You.
+[172.46s - Agent]: Genesis, I'm the director of call.
+[176.52s - Caller]: Hello.
+[176.78s - Agent]: Hello.
+[179.85s - Caller]: Can you hear me?
+[180.14s - Agent]: Yes, I can hear you.
+[183.47s - Caller]: Yes, this is John guerlain. I'm calling about my 2023 Hyundai, Santa Fe, it's still will not start up. It's still having issues. I can't even drive it at my driveway. It was in the shops for 10 days last month.
+[190.69s - Agent]: No.
+[195.33s - Agent]: Okay, let me get it. Let me get a service for you.
+[198.73s - Agent]: On our website at Dublin hyundai.com or Dublin genesis.com, we're ready to help you just select schedule service in the service menu on our website. Please hold so we can connect your call.
+[199.87s - Caller]: Okay.
+[216.24s - Agent]: We invite you to visit our spectacular Showplace, giving you our customers a luxurious welcoming atmosphere to take the stress out of buying a new car. Thanks for holding, we'll be connecting you shortly.
+[234.21s - Agent]: We know your call is waiting and we'll be connecting you shortly. Dublin. Hyundai and Genesis of Dublin is the tri valley Showplace for Hyundai and Genesis where we're doing it, right? Every day. You're invited to take a test drive, you won't be disappointed. We know your call is waiting, we'll be connecting you in just a moment.
+[257.36s - Agent]: You'll find it hard to beat the style and performance of the all-new Hyundai and Genesis models. Like the amazing 2026 Hyundai ioniq 5, electric sedan with a range of up to 318 me now at Dublin Hyundai. Now at Dublin Hyundai just off highway 580 at the Hopyard exit.
+[280.26s - Agent]: We have 1 of the largest hunt. Thank you. This is
+[285.65s - Caller]: Yeah, hello.
+[288.09s - Agent]: hi. How can I help you?
+[289.46s - Caller]: Hi.
+[295.62s - Caller]: Yeah.
+[296.63s - Caller]: Yeah. Go to John, uh, you have a lot of background noise. I can barely hear you.
+[301.7s - Agent]: Uh, yeah, I took the phone off of the speaker and uh can you hear me now?
+[307.56s - Caller]: Yeah, that's a little bit better. Okay. So my name is John, I have a 2023 Hyundai Santa Fe that was in the shop for 10 days without resolution last month.
+[319.38s - Agent]: Mhm.
+[319.68s - Caller]: And, um, I cannot drive it right now. It
+[326.12s - Caller]: The battery is it seems to be the battery issue what you want to start up, and I can't even drive it down to the dealer to fix it.
+[326.48s - Agent]: You cannot.
+[334.98s - Agent]: Got it.
+[335.21s - Caller]: So what can we do about this?
+[348.26s - Agent]: So do you recommend it to?
+[354.7s - Agent]: Did you replace your 12-volt battery?
+[355.9s - Caller]: Yeah.
+[358.35s - Caller]: I got the phone in my wallpaper.
+[360.63s - Agent]: Yeah. Did you replace your 12v battery after the last recommendation?
+[368.49s - Caller]: Okay. Um, hang on. Hang on.
+[372.84s - Agent]: We will diagnose this video.
+[376.52s - Caller]: I'm trying to get you on speakerphone.
+[379.21s - Agent]: No, this is good.
+[385.17s - Caller]: Hang on.
+[390.15s - Caller]: Okay.
+[399.88s - Caller]: Hi.
+[401.68s - Agent]: Hello.
+[402.92s - Caller]: Hi, hello.
+[404.22s - Agent]: Hey, this is this is Ron from Dublin, Hyundai. I'm just looking at the history
+[409.11s - Agent]: in the last service, when you were here,
+[411.85s - Agent]: um,
+[413.52s - Agent]: did the advisor advise you about, uh, the 12 volt battery recommended to be replaced.
+[421.04s - Caller]: Uh, okay.
+[425.29s - Caller]: uh, Joe
+[429.97s - Caller]: they told the last time you were there, they ask you to replace and then I don't you did. They replace it with the call but they said the CPA was a little bit low but they never replaced about it. And now I have a car that won't start up.
+[430.05s - Agent]: So, if
+[447.17s - Caller]: I, uh,
+[450.67s - Caller]: that John my husband say saying that um, uh,
+[451.12s - Agent]: Okay.
+[453.5s - Agent]: so,
+[455.69s - Agent]: So, the battery right now is not replaced, correct?
+[460.21s - Caller]: The diagnosis not replace.
+[463.3s - Agent]: No, the 12 volt battery. It's not
+[463.99s - Caller]: Uh, no, no.
+[466.68s - Agent]: okay.
+[467.44s - Caller]: yeah, but you didn't replace
+[470.9s - Caller]: us to replace it, you didn't ask to replace it.
+[482.73s - Caller]: Slow, but not low enough to replace. And now it's not to start in the car.
+[487.88s - Agent]: Got it.
+[489.37s - Caller]: Is.
+[492.27s - Agent]: Do me a favor. Can you contact? Where do you stay?
+[500.27s - Caller]: First.
+[501.69s - Agent]: Where do you live?
+[504.03s - Caller]: Uh, Livermore.
+[506.11s - Agent]: sorry, where
+[508.44s - Caller]: Livermore.
+[510.31s - Agent]: Leave them all. Okay uh do me a favor. I cannot do anything right now because we'll have to do a Diagnostics on it. Okay? What I would recommend if you call uh Hyundai roadside assistance, and get the vehicle towed in, we can attend to it tomorrow.
+[526.7s - Caller]: Okay.
+[528.77s - Agent]: Yeah, they will tell your vehicle for free.
+[529.08s - Caller]: Let me.
+[532.89s - Caller]: Need to call the hunt. I told.
+[536.41s - Agent]: Yeah. Call uh just Google uh Hyundai roadside assistance. Phone number.
+[539.26s - Caller]: Ya.
+[542.02s - Agent]: And get the vehicle towed to our shop.
+[544.97s - Caller]: and then, and they, they you come to
+[550.62s - Agent]: If you call them today, they'll tow the vehicle today. They can tow it or either tomorrow, and then we can look at it tomorrow.
+[556.78s - Caller]: But you need to call.
+[559.83s - Caller]: The hand, I told ya.
+[563.64s - Agent]: Roadside assistance Hyundai Road services.
+[563.73s - Caller]: Okay, they give me the number. Yes.
+[567.54s - Agent]: You want the number? I give it to you.
+[570.45s - Caller]: Yes.
+[571.71s - Agent]: Okay, hold on. Stay on the line.
+[578.04s - Agent]: Okay, Hyundai roadside assistance. Phone number when you're ready.
+[579.35s - Caller]: Can you can you tell me?
+[583.85s - Caller]: Yes, I'm ready.
+[585.94s - Agent]: 1 800.
+[590.75s - Caller]: 00.
+[592.02s - Agent]: 2 43.
+[595.0s - Caller]: Uh, 2 4 3.
+[597.7s - Agent]: 7766.
+[598.69s - Caller]: uh,
+[601.96s - Caller]: 7 7, 6, 6.
+[603.76s - Agent]: 766. Yep.
+[608.11s - Caller]: 7 6.
+[610.62s - Agent]: Yes.
+[613.72s - Caller]: Okay.
+[615.24s - Agent]: Yeah, give them a call. Get your vehicle towed in, and then we can attend to it first thing in the morning tomorrow. Okay.
+[620.75s - Agent]: Uh, I see that Keisha was helping you in the last visit so she will be taking care of you, okay? When the vehicle comes in tomorrow,
+[621.31s - Caller]: Okay.
+[628.9s - Caller]: Okay. Uh, hold on.
+[633.4s - Caller]: Yeah, but tomorrow, he has need to go to work.
+[638.05s - Agent]: So I mean like you can get the vehicle towed in first thing in the morning we'll check and then we can advise and then Trisha will advise you on the next step.
+[645.48s - Agent]: Okay, if the battery needs to be replaced, we'll uh, try and uh, take care of you.
+[646.54s - Caller]: Uh, okay.
+[650.38s - Agent]: Same time.
+[651.39s - Caller]: Okay.
+[653.02s - Caller]: Okay.
+[653.14s - Agent]: All right. Okay. Thank you.
+[654.86s - Caller]: All right.
+[656.19s - Agent]: Bye.
+[656.28s - Caller]: Okay."
+20a36c9c-2810-4b1c-922b-e13f59fe4195,Normal / No Issue,Neutral,Escalated,"['Scheduling a 6-month service appointment', 'Inquiring about service duration']",False,Freedom Kia,2026-08-09,"A customer called Freedom Kia to schedule a service appointment for their 2026 Kia Seltos. The agent confirmed the vehicle details and noted that the customer wanted the special 6-month service while waiting at the dealership. The appointment was set for Wednesday, August 19th, at 9:30 a.m., and the customer requested to be connected with a service advisor for timing information.","[2.36s - Agent]: Welcome to Freedom Kia. This is Serena. Are you calling to make a service appointment or to talk to an adviser
+[9.3s - Caller]: Make an appointment.
+[11.73s - Agent]: I see you don't have a vehicle on file. Could you tell me the year make and model,
+[17.42s - Caller]: At 2026. Kia cellos.
+[22.74s - Agent]: Perfect and how many miles are currently on it?
+[26.18s - Caller]: I have no idea.
+[28.3s - Agent]: No problem at all. Is there any estimate you might have?
+[33.66s - Caller]: Estimate, for what?
+[36.54s - Agent]: Just a mileage estimate for the vehicle. If you have it.
+[39.47s - Caller]: All. It's probably, uh,
+[42.71s - Caller]: Probably.
+[44.66s - Caller]: Under 2,000 miles.
+[48.32s - Agent]: Under 2,000 miles got it. What service would you like to schedule today?
+[53.11s - Caller]: The special 6 months service.
+[57.33s - Agent]: Got it. You're looking for this special 6 months, service on the day of your appointment, will you be providing your own transportation or would you like to wait here?
+[65.54s - Caller]: I'd like to wait.
+[68.55s - Agent]: Sounds good. And what day works best for your appointment?
+[73.12s - Caller]: um,
+[75.21s - Caller]: All right, let me think here. How about uh,
+[81.63s - Agent]: I have an opening on Wednesday, August 19th at 8:30, a.m. or 9:30 a.m. do either of those work.
+[88.29s - Caller]: Yeah, 9:30 would be good.
+[91.64s - Agent]: So that's a special 6-month service on your 2026 Kia. Seltos for Wednesday, August 19th, at 9:30. A.m. and you'll be waiting here, does that all sound correct?
+[100.74s - Caller]: Um, yes. How long will it take?
+[104.51s - Agent]: I don't have that timing information on hand. Would you like me to connect you with 1 of our service advisors who can give you an exact estimate?
+[112.04s - Caller]: Uh, yes, please.
+[114.7s - Agent]: I will transfer you to 1 of our service advisors please, hold on."
